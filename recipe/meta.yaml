@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=2.7
     - pip
     - ply
   run:
-    - python
+    - python >=2.7
     - ply
 
 test:
@@ -32,7 +32,7 @@ test:
 
 about:
   home: https://github.com/pcdshub/epics-pypdb
-  license: EPICS Open
+  license: LicenseRef-EPICS-Open
   license_family: Other
   license_file: LICENSE
   summary: Python tools for EPICS Process Database
@@ -42,5 +42,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - hhslepicka 
     - klauer
+    - zllentz
+    - zrylettc
