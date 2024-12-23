@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=2.7
+    - python {{ python_min }}
     - pip
     - ply
   run:
-    - python >=2.7
+    - python >={{ python_min }}
     - ply
 
 test:
@@ -29,6 +29,7 @@ test:
 
   requires:
     - nose
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pcdshub/epics-pypdb
