@@ -43,6 +43,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - klauer
-    - zllentz
-    - zrylettc
+    - conda-forge/pcdsdevices
